@@ -4,18 +4,18 @@ import time
 
 # Python Reddit API Wrapper, create account at reddit.com/prefs/apps and replace information
 reddit = praw.Reddit(client_id="",
-					 client_secret="",
-					 user_agent="",
-					 username="",
-					 password="")
+		     client_secret="",
+		     user_agent="",
+		     username="",
+		     password="")
 
 # Access television subreddit
 subreddit = reddit.subreddit("television")
 
 inspiring_quotes = ["The best revenge is massive success. -Frank Sinatra",
-			  		"Talent is cheaper than table salt. What separates the talented individual from the successful one is a lot of hard work. -Stephen King",
-			  		"Fall seven times, stand up eight. -Japanese Proverb",
-			  		"He who has a why to live can bear almost any how. -Friedrich Nietzsche"]
+		    "Talent is cheaper than table salt. What separates the talented individual from the successful one is a lot of hard work. -Stephen King",
+		    "Fall seven times, stand up eight. -Japanese Proverb",
+		    "He who has a why to live can bear almost any how. -Friedrich Nietzsche"]
 
 # Loop through first 10 submisssions in subreddit
 for submission in subreddit.hot(limit=10):
